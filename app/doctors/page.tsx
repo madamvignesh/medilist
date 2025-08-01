@@ -5,24 +5,22 @@ import { Search, X } from "lucide-react";
 import Stepper, { Step } from "../components/stepper/stepper";
 
 const DoctorsPage = () => {
-    interface Doctors {
-        id: string;
-        name: string;
-        email: string;
-        datetime: string;
-        doctor_name: string;
-    }
     type Doctor = {
-        id: number;
-        name: string;
-        specialization: string;
-        availability: string;
-        // include other fields used in your component
-    };
+  id: string;
+  name: string;
+  email: string;
+  datetime: string;
+  doctor_name: string;
+  specialization: string;
+  availability: string;
+  profile_image: string;
+};
 
     const [doctors, setDoctors] = useState<Doctors[]>([]);
+
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedDoctor, setSelectedDoctor] = useState<Doctors | null>(null);
+
     const [showModal, setShowModal] = useState(false);
     const [patientName, setPatientName] = useState("");
     const [patientEmail, setPatientEmail] = useState("");
