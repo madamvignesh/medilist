@@ -4,8 +4,8 @@
 
 * **Frontend**: React, TypeScript, Tailwind CSS
 * **Backend**: Node.js, Express.js
-* **Database**: SQLite (via `sqlite3` and `better-sqlite3`)
-* **Others**: Stepper library (`react-form-stepper`), UUID for appointment IDs, Vite for development setup
+* **Database**: SQLite (`sqlite3`)
+* **Others**: Stepper library (`react-form-stepper`), UUID for appointment IDs, Next.js for development setup
 
 ---
 
@@ -13,10 +13,8 @@
 
 * Implement user authentication using Firebase Authentication or Google OAuth
 * Add admin panel to manage doctors and appointments
-* Integrate real-time availability updates with WebSockets
 * Enable appointment filtering by date and time
 * Send email confirmations using services like EmailJS or SendGrid
-* Mobile responsiveness and accessibility improvements
 * Persistent data storage using Firestore instead of SQLite
 
 ---
@@ -39,7 +37,7 @@ Handled state lifting and ensured final step triggers the `bookAppointment()` fu
 Content inside the modal changed dynamically depending on the step, which made the modal size inconsistent.
 
 **Solution**:
-Used `w-fit` with Tailwind CSS and adjusted inner component width using `max-w` and `min-w` utilities. This ensured consistent and responsive modal layout.
+Instead of relying on w-fit, max-w, or min-w utilities, I simplified the layout by expanding the parent container to cover the full screen width. This approach provided enough space for any child content variation, ensuring the modal remained stable and visually consistent throughout the step transitions.
 
 ---
 
