@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => (
@@ -13,23 +14,23 @@ const Footer: React.FC = () => (
       <div>
         <h4 className="font-semibold mb-2">Quick Links</h4>
         <ul>
-          <li><a href="/" className="hover:underline">Home</a></li>
-          <li><a href="/doctors" className="hover:underline">Doctors</a></li>
-          <li><a href="/about" className="hover:underline">About</a></li>
-          <li><a href="/contact" className="hover:underline">Contact</a></li>
+          <li><Link href="/" className="hover:underline">Home</Link></li>
+          <li><Link href="/doctors" className="hover:underline">Doctors</Link></li>
+          <li><Link href="/about" className="hover:underline">About</Link></li>
+          <li><Link href="/contact" className="hover:underline">Contact</Link></li>
         </ul>
       </div>
       {/* Legal & Social */}
       <div>
         <h4 className="font-semibold mb-2">Legal & Social</h4>
         <ul className="mb-4">
-          <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
-          <li><a href="/terms" className="hover:underline">Terms of Service</a></li>
+          <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
+          <li><Link href="/terms" className="hover:underline">Terms of Service</Link></li>
         </ul>
         <div className="flex space-x-4">
-          <a href="#"><Facebook className="w-6 h-6 hover:text-white"/></a>
-          <a href="#"><Twitter className="w-6 h-6 hover:text-white"/></a>
-          <a href="#"><Instagram className="w-6 h-6 hover:text-white"/></a>
+          <Link href="#"><Facebook className="w-6 h-6 hover:text-white"/></Link>
+          <Link href="#"><Twitter className="w-6 h-6 hover:text-white"/></Link>
+          <Link href="#"><Instagram className="w-6 h-6 hover:text-white"/></Link>
         </div>
       </div>
     </div>
