@@ -1,4 +1,4 @@
-### MediList
+# MediList
 
 ## 🛠 Tools & Libraries Used
 
