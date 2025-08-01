@@ -4,7 +4,14 @@ import { useState, useEffect, useMemo } from "react";
 import { Search } from "lucide-react";
 
 const ManagementPage = () => {
-    const [doctors, setDoctors] = useState([]);
+    interface Doctor{
+        id: string;
+        name: string;
+        email: string;
+        datetime: string;
+        doctor_name: string;
+    }
+    const [doctors, setDoctors] = useState<Doctor[]>([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
 
