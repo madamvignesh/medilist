@@ -59,6 +59,7 @@ const ManagementPage = () => {
 
     useEffect(() => {
         fetchDoctors();
+        setLoading(true)
     }, []);
 
     if (loading) {
@@ -82,7 +83,8 @@ const ManagementPage = () => {
                 </button>
             </div>
             <ul className="gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {doctors.map((doctor) => (
+                {doctors ? (
+                    doctors.map((doctor) => (
                     <li key={doctor.id} className="bg-ebony-700/30 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors hover:scale-102 transition-transform cursor-pointer">
                         <div>
                             <h2 className="text-lg font-bold">{doctor.name}</h2>
@@ -98,6 +100,8 @@ const ManagementPage = () => {
                             </select>
                         </div>
                     </li>
+                )) : (
+                    <li className="text-center text-gray-500">No doctors found</li> 
                 ))}
             </ul>
         </div>
