@@ -50,7 +50,7 @@ const DoctorsPage = () => {
     const bookAppointment = async (doctor: Doctor) => {
         const body = { name: patientName, email: patientEmail, datetime: appointmentDate, doctor_name: doctor.name };
         try {
-            const response = await fetch("http://localhost:3001/api/book", {
+            const response = await fetch("https://medilist-back.onrender.com/api/book", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
