@@ -123,6 +123,3 @@ Explore official resources to dive deeper into Next.js:
 
 This project was deployed using [Vercel](https://vercel.com), the official platform from the creators of Next.js. For guidance on deploying your own project, visit the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
----
-
-Let me know if you'd like to add badges or a features list next.
