@@ -4,13 +4,16 @@ import { useState, useEffect, useMemo } from "react";
 import { Search } from "lucide-react";
 
 const ManagementPage = () => {
-    interface Doctor {
+    type Doctor = {
         id: string;
         name: string;
         email: string;
         datetime: string;
         doctor_name: string;
-    }
+        specialization: string;
+        availability: string;
+        profile_image: string;
+    };
     const [doctors, setDoctors] = useState<Doctor[]>([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
