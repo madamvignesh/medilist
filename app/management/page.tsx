@@ -64,7 +64,7 @@ const ManagementPage = () => {
 
     useEffect(() => {
         console.log("Loading:", loading);
-    }, [loading]);
+    });
 
 
     return (
