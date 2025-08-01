@@ -12,6 +12,12 @@ const DoctorsPage = () => {
         datetime: string;
         doctor_name: string;
     }
+    type Doctor = {
+        id: number;
+        name: string;
+        specialization: string;
+        // include other fields used in your component
+    };
 
     const [doctors, setDoctors] = useState<Doctor[]>([]);
     const [searchTerm, setSearchTerm] = useState("");
@@ -37,12 +43,12 @@ const DoctorsPage = () => {
         fetchDoctors();
     }, [searchTerm]);
 
-    const handleBook = (doctor) => {
+    const handleBook = (doctor: Doctor) => {
         setSelectedDoctor(doctor);
         setShowModal(true);
     };
 
-    const bookAppointment = async (doctor) => {
+    const bookAppointment = async (doctor: Doctor) => {
         const body = { name: patientName, email: patientEmail, datetime: appointmentDate, doctor_name: doctor.name };
         try {
             const response = await fetch("http://localhost:3001/api/book", {
@@ -157,20 +163,20 @@ const DoctorsPage = () => {
                                 <div className="flex flex-col gap-4 p-2">
                                     <h2>Step 2: What is the patient&#39;s name?</h2>
 
-                                    <input value={patientName} onChange={(e) => setPatientName(e.target.value)} placeholder="Your name?" className="stepper-input"/>
+                                    <input value={patientName} onChange={(e) => setPatientName(e.target.value)} placeholder="Your name?" className="stepper-input" />
                                 </div>
 
                             </Step>
                             <Step>
                                 <div className="flex flex-col gap-4 p-2">
                                     <h2>Step 3: What is the patient&#39;s email?</h2>
-                                    <input value={patientEmail} onChange={(e) => setPatientEmail(e.target.value)} placeholder="Your email?" className="stepper-input"/>
+                                    <input value={patientEmail} onChange={(e) => setPatientEmail(e.target.value)} placeholder="Your email?" className="stepper-input" />
                                 </div>
                             </Step>
                             <Step>
                                 <div className="flex flex-col gap-4 p-2">
                                     <h2>Final Step</h2>
-                                    <input type="datetime-local" value={appointmentDate} onChange={(e) => setAppointmentDate(e.target.value)} className="stepper-input"/>
+                                    <input type="datetime-local" value={appointmentDate} onChange={(e) => setAppointmentDate(e.target.value)} className="stepper-input" />
                                 </div>
                             </Step>
                         </Stepper>
