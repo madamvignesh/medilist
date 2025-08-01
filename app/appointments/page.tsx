@@ -1,12 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {CopyX} from "lucide-react";
+import { CopyX } from "lucide-react";
 
 
 const AppointmentsPage = () => {
-    const [appointments, setAppointments] = useState([]);
     const [loading, setLoading] = useState(true);
+    interface Appointment {
+        id: string;
+        name: string;
+        email: string;
+        datetime: string;
+        doctor_name: string;
+    }
+
+    const [appointments, setAppointments] = useState<Appointment[]>([]);
 
     const fetchAppointments = async () => {
         try {
@@ -50,8 +58,8 @@ const AppointmentsPage = () => {
                 {appointments && appointments.map((appointment) => (
                     <li key={appointment.id} className="bg-ebony-900/40 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors">
                         <div>
-                            <span className="text-ebony-50 font-bold">Doctor: {appointment.doctor_name}</span> <br/>
-                        <p className="text-md text-ebony-100">{appointment.name} - {appointment.datetime} </p>
+                            <span className="text-ebony-50 font-bold">Doctor: {appointment.doctor_name}</span> <br />
+                            <p className="text-md text-ebony-100">{appointment.name} - {appointment.datetime} </p>
                             <span className="text-blue-102">({appointment.email})</span>
                         </div>
                         <div>
@@ -59,7 +67,7 @@ const AppointmentsPage = () => {
                                 onClick={() => deleteAppointment(appointment.id)}
                                 className="mt-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600/40 transition-colors"
                             >
-                                <CopyX  />
+                                <CopyX />
                             </button>
                         </div>
                     </li>
