@@ -29,12 +29,12 @@ const DoctorsPage = () => {
         fetchDoctors();
     }, [searchTerm]);
 
-    const handleBook = (doctor: any) => {
+    const handleBook = (doctor) => {
         setSelectedDoctor(doctor);
         setShowModal(true);
     };
 
-    const bookAppointment = async (doctor: any) => {
+    const bookAppointment = async (doctor) => {
         const body = { name: patientName, email: patientEmail, datetime: appointmentDate, doctor_name: doctor.name };
         try {
             const response = await fetch("http://localhost:3001/api/book", {
@@ -83,7 +83,7 @@ const DoctorsPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {doctors.length > 0 ? (
-                    doctors.map((doctor: any) => (
+                    doctors.map((doctor) => (
                         <div
                             key={doctor.id}
                             className="bg-ebony-700/40 p-5 rounded-lg shadow-md hover:scale-95 transition-transform hover:bg-ebony-600/50 cursor-pointer"
@@ -147,7 +147,7 @@ const DoctorsPage = () => {
                             </Step>
                             <Step>
                                 <div className="flex flex-col gap-4 p-2">
-                                    <h2>Step 2: What is the patient's name?</h2>
+                                    <h2>Step 2: What is the patient&#39;s name?</h2>
 
                                     <input value={patientName} onChange={(e) => setPatientName(e.target.value)} placeholder="Your name?" className="stepper-input"/>
                                 </div>
@@ -155,7 +155,7 @@ const DoctorsPage = () => {
                             </Step>
                             <Step>
                                 <div className="flex flex-col gap-4 p-2">
-                                    <h2>Step 3: What is the patient's email?</h2>
+                                    <h2>Step 3: What is the patient&#39;s email?</h2>
                                     <input value={patientEmail} onChange={(e) => setPatientEmail(e.target.value)} placeholder="Your email?" className="stepper-input"/>
                                 </div>
                             </Step>

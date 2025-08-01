@@ -23,7 +23,7 @@ const ManagementPage = () => {
     }
 
     const filteredDoctors = useMemo(() => {
-        return doctors.filter((doctor: any) =>
+        return doctors.filter((doctor) =>
             doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             doctor.specialization.toLowerCase().includes(searchTerm.toLowerCase())
         );
