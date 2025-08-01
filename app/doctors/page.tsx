@@ -16,10 +16,10 @@ const DoctorsPage = () => {
   profile_image: string;
 };
 
-    const [doctors, setDoctors] = useState<Doctors[]>([]);
+    const [doctors, setDoctors] = useState<Doctor[]>([]);
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [selectedDoctor, setSelectedDoctor] = useState<Doctors | null>(null);
+    const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
 
     const [showModal, setShowModal] = useState(false);
     const [patientName, setPatientName] = useState("");
