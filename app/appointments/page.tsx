@@ -21,7 +21,7 @@ const AppointmentsPage = () => {
         }
     }
 
-    const deleteAppointment = async (id) => {
+    const deleteAppointment = async (id: string) => {
         try {
             const response = await fetch(`http://localhost:3001/api/appointments/${id}`, {
                 method: "DELETE",
