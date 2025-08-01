@@ -62,6 +62,10 @@ const ManagementPage = () => {
         setLoading(true)
     }, []);
 
+    useEffect(() => {
+        console.log("Loading:", loading);
+    }, [loading]);
+
 
     return (
         <div className="flex flex-col p-5 pt-25 bg-ebony-950 text-white min-h-screen">
