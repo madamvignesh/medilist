@@ -81,13 +81,13 @@ const ManagementPage = () => {
             </div>
             <ul className="gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {loading && <div>Loading...</div>}
-                {doctors ? (
+                {doctors && doctors.length > 0 ? (
                     doctors.map((doctor) => (
-                    <li key={doctor.id} className="bg-ebony-700/30 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors hover:scale-102 transition-transform cursor-pointer">
-                        <div>
-                            <h2 className="text-lg font-bold">{doctor.name}</h2>
-                            <p className="text-sm">{doctor.specialization}</p>
-                        </div>
+                        <li key={doctor.id} className="bg-ebony-700/30 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors hover:scale-102 transition-transform cursor-pointer">
+                            <div>
+                                <h2 className="text-lg font-bold">{doctor.name}</h2>
+                                <p className="text-sm">{doctor.specialization}</p>
+                            </div>
                         <div>
                             <select className="mt-2 bg-ebony-800 text-white p-2 rounded" value={doctor.availability} onChange={(e) => updateAvailability(doctor.id, e.target.value)}>
                                 <option value="Available">Available</option>
@@ -98,8 +98,8 @@ const ManagementPage = () => {
                             </select>
                         </div>
                     </li>
-                )) : (
-                    <li className="text-center text-gray-500">No doctors found</li>
+                ))) : (
+                    <div className="text-center text-gray-500">No doctors found</div>
                 )}
             </ul>
         </div>
