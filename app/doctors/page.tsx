@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect, useMemo } from "react";
 import { Search, X } from "lucide-react";
-import Stepper, { Step } from "../components/stepper/page.tsx";
+import Stepper, { Step } from "../components/stepper/stepper.jsx";
 
 const DoctorsPage = () => {
     const [doctors, setDoctors] = useState([]);
