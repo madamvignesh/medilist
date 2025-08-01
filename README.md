@@ -1,5 +1,35 @@
 <<<<<<< HEAD
-# MediList
+
+# 💊 MediList – Connecting You to Care, One Click at a Time
+
+MediList is a smart, full-stack healthcare management app built using **Next.js**. It goes beyond medication tracking by simplifying doctor bookings and appointment management — all from a single platform.
+
+🔗 **Live Demo**: [https://medilist-six.vercel.app](https://medilist-six.vercel.app)
+
+---
+
+## ✨ Key Features
+
+
+### 👨‍⚕️ One-Click Doctor Booking
+
+* Easily book appointments with doctors through a simplified one-click process
+* Smart filtering and UI make booking smooth and fast
+
+### 📅 View All Appointments in One Go
+
+* Access and manage all booked appointments in a clean, unified dashboard
+* Time-based sorting for better visibility
+
+### 🏥 Doctor Availability Management
+
+* Admins or doctors can update their availability
+* Access control built-in for secure management of schedules and appointments
+
+### 📱 Modern, Responsive UI
+
+* Mobile-first design with Tailwind CSS
+* Interactive modals, stepper navigation, and real-time feedback
 
 ## 🛠 Tools & Libraries Used
 
