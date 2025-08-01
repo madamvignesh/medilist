@@ -16,6 +16,7 @@ const DoctorsPage = () => {
         id: number;
         name: string;
         specialization: string;
+        availability: string;
         // include other fields used in your component
     };
 
