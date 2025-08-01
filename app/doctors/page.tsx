@@ -27,7 +27,7 @@ const DoctorsPage = () => {
     const [appointmentDate, setAppointmentDate] = useState("");
 
     const fetchDoctors = async () => {
-        const response = await fetch(`http://localhost:3001/api/doctors/search?search=${searchTerm}`);
+        const response = await fetch(`https://medilist-back.onrender.com/api/doctors/search?search=${searchTerm}`);
         const data = await response.json();
         setDoctors(data);
         console.log("Fetched doctors:", data);

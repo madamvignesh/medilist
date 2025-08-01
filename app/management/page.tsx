@@ -20,7 +20,7 @@ const ManagementPage = () => {
 
     const fetchDoctors = async () => {
         try {
-            const response = await fetch("http://localhost:3001/api/management");
+            const response = await fetch("https://medilist-back.onrender.com/api/management");
             const data = await response.json();
 
             setDoctors(data);
@@ -41,7 +41,7 @@ const ManagementPage = () => {
 
     const updateAvailability = async (doctorId: string, newAvailability: string) => {
         try {
-            const response = await fetch(`http://localhost:3001/api/management/${doctorId}`, {
+            const response = await fetch(`https://medilist-back.onrender.com/api/management/${doctorId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

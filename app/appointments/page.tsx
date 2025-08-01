@@ -18,7 +18,7 @@ const AppointmentsPage = () => {
 
     const fetchAppointments = async () => {
         try {
-            const response = await fetch("http://localhost:3001/api/appointments");
+            const response = await fetch("https://medilist-back.onrender.com/api/appointments");
             const data = await response.json();
             console.log(data);
             setAppointments(data);
@@ -31,7 +31,7 @@ const AppointmentsPage = () => {
 
     const deleteAppointment = async (id: string) => {
         try {
-            const response = await fetch(`http://localhost:3001/api/appointments/${id}`, {
+            const response = await fetch(`https://medilist-back.onrender.com/api/appointments/${id}`, {
                 method: "DELETE",
             });
             if (!response.ok) {
