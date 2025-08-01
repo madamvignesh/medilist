@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Search } from "lucide-react";
 
 const ManagementPage = () => {
-    interface Doctor{
+    interface Doctor {
         id: string;
         name: string;
         email: string;
