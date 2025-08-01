@@ -80,38 +80,49 @@ Customizing the placeholder color to match the UI theme wasn’t working initial
 **Solution**:
 Added a CSS rule using `::placeholder` to manually override the placeholder color while maintaining full visibility with `opacity: 1`.
 
-## Getting Started
+Here's a rewritten and polished version of your **"Getting Started"** and **"Deployment"** sections, personalized for your MediList project and including your Vercel URL:
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+To run the development server locally:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the app by modifying the `app/page.tsx` file. The changes will be reflected automatically during development.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to load [Geist](https://vercel.com/font), a modern font optimized for web.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Live Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Check out the live deployed version of MediList here:
+🔗 [https://medilist-six.vercel.app/](https://medilist-six.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📘 Learn More
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Explore official resources to dive deeper into Next.js:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 7c9937e (Initial commit for MediList full stack app)
+* 📄 [Next.js Docs](https://nextjs.org/docs) – Comprehensive guide to Next.js features.
+* 🧠 [Next.js Learn](https://nextjs.org/learn) – Interactive hands-on tutorials.
+* 💻 [Next.js GitHub](https://github.com/vercel/next.js) – Source code and community contributions.
+
+---
+
+## 🚢 Deployment
+
+This project was deployed using [Vercel](https://vercel.com), the official platform from the creators of Next.js. For guidance on deploying your own project, visit the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+---
+
+Let me know if you'd like to add badges or a features list next.
