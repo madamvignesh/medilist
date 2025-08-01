@@ -39,7 +39,7 @@ const ManagementPage = () => {
         );
     }, [searchTerm, doctors]);
 
-    const updateAvailability = async (doctorId, newAvailability) => {
+    const updateAvailability = async (doctorId: string, newAvailability: string) => {
         try {
             const response = await fetch(`http://localhost:3001/api/management/${doctorId}`, {
                 method: "PUT",
