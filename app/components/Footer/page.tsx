@@ -34,6 +34,9 @@ const Footer: React.FC = () => (
         </div>
       </div>
     </div>
+    <div className='mt-8 '>
+        <h3 className='text-center'>Developed by Madam Vignesh</h3>
+      </div>
     <div className="mt-8 border-gray-700 pt-4 text-center text-sm">
       © {new Date().getFullYear()} MediList. All rights reserved.
     </div>
