@@ -10,10 +10,18 @@ const Header = () => {
                     <h1 className="text-2xl font-bold text-ebony-100">MediList</h1>
                 </div>
                 <div className="flex gap-5 justify-end items-center">
-                    <Link href="/" className="text-sm text-white hover:text-blue-102 hidden md:block">Home</Link>
-                    <Link href="/doctors" className="text-sm text-white hover:text-blue-102 hidden md:block">Doctors</Link>
-                    <Link href="/appointments" className="text-sm text-white hover:text-blue-102 hidden md:block">Appointments</Link>
-                    <Link href="/management" className="text-sm text-white hover:text-blue-102 hidden md:block">Management</Link>
+                    <Link href="/" className="text-sm text-white hover:text-blue-102 hidden md:block">
+                        <House className="w-5 h-5" /> Home
+                    </Link>
+                    <Link href="/doctors" className="text-sm text-white hover:text-blue-102 hidden md:block">
+                        <ClipboardPlus className="w-5 h-5" /> Doctors
+                    </Link>
+                    <Link href="/appointments" className="text-sm text-white hover:text-blue-102 hidden md:block">
+                        <ClipboardClock className="w-5 h-5" /> Appointments
+                    </Link>
+                    <Link href="/management" className="text-sm text-white hover:text-blue-102 hidden md:block">
+                        <ClipboardList className="w-5 h-5" /> Management
+                    </Link>
                     <Link href="/" className="text-sm text-white hover:text-blue-102 block md:hidden">
                         <House className="w-5 h-5" />
                     </Link>
