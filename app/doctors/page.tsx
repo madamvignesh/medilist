@@ -6,15 +6,15 @@ import Stepper, { Step } from "../components/stepper/stepper";
 
 const DoctorsPage = () => {
     type Doctor = {
-  id: string;
-  name: string;
-  email: string;
-  datetime: string;
-  doctor_name: string;
-  specialization: string;
-  availability: string;
-  profile_image: string;
-};
+        id: string;
+        name: string;
+        email: string;
+        datetime: string;
+        doctor_name: string;
+        specialization: string;
+        availability: string;
+        profile_image: string;
+    };
 
     const [doctors, setDoctors] = useState<Doctor[]>([]);
     const [loading, setLoading] = useState(true);
@@ -99,44 +99,46 @@ const DoctorsPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {loading ? (
-                    {doctors.length > 0 ? (
-                    doctors.map((doctor) => (
-                        <div
-                            key={doctor.id}
-                            className="bg-ebony-700/40 p-5 rounded-lg shadow-md hover:scale-95 transition-transform hover:bg-ebony-600/50 cursor-pointer"
-                        >
-                            <div className="flex flex-row items-center justify-between mb-4">
-                                <div>
-                                    <h2 className="text-xl text-blue-102/90 font-bold mb-2">{doctor.name}</h2>
-                                    <p className="text-ebony-500 font-semibold mb-4">{doctor.specialization}</p>
+                    {
+                        doctors.length > 0 ? (
+                            doctors.map((doctor) => (
+                                <div
+                                    key={doctor.id}
+                                    className="bg-ebony-700/40 p-5 rounded-lg shadow-md hover:scale-95 transition-transform hover:bg-ebony-600/50 cursor-pointer"
+                                >
+                                    <div className="flex flex-row items-center justify-between mb-4">
+                                        <div>
+                                            <h2 className="text-xl text-blue-102/90 font-bold mb-2">{doctor.name}</h2>
+                                            <p className="text-ebony-500 font-semibold mb-4">{doctor.specialization}</p>
+                                        </div>
+                                        <Image
+                                            src={doctor.profile_image}
+                                            alt={doctor.name}
+                                            width={50}
+                                            height={50}
+                                            className="rounded-full mb-4"
+                                        />
+                                    </div>
+                                    <div className="flex flex-row items-center justify-between">
+                                        <p className="text-ebony-50">
+                                            Available: <span className="font-bold">{doctor.availability}</span>
+                                        </p>
+                                        {doctor.availability === "Available" ? (
+                                            <button
+                                                onClick={() => handleBook(doctor)}
+                                                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                                            >
+                                                Book Appointment
+                                            </button>) : (
+                                            <p className="text-red-500">Not Available</p>
+                                        )}
+                                    </div>
                                 </div>
-                                <Image
-                                    src={doctor.profile_image}
-                                    alt={doctor.name}
-                                    width={50}
-                                    height={50}
-                                    className="rounded-full mb-4"
-                                />
-                            </div>
-                            <div className="flex flex-row items-center justify-between">
-                                <p className="text-ebony-50">
-                                    Available: <span className="font-bold">{doctor.availability}</span>
-                                </p>
-                                {doctor.availability === "Available" ? (
-                                    <button
-                                        onClick={() => handleBook(doctor)}
-                                        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-                                    >
-                                        Book Appointment
-                                    </button>) : (
-                                    <p className="text-red-500">Not Available</p>
-                                )}
-                            </div>
-                        </div>
-                    ))
-                ) : (
-                    <p>No doctors found</p>
-                )}) : (
+                            ))
+                        ) : (
+                            <p>No doctors found</p>
+                        )
+                    }) : (
                     <p>Loading doctors...</p>
                 )}
             </div>
