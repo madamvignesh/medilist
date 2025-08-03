@@ -99,7 +99,7 @@ const DoctorsPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {loading ? (
-                    {
+                    
                         doctors.length > 0 ? (
                             doctors.map((doctor) => (
                                 <div
@@ -138,7 +138,7 @@ const DoctorsPage = () => {
                         ) : (
                             <p>No doctors found</p>
                         )
-                    }) : (
+                    ) : (
                     <p>Loading doctors...</p>
                 )}
             </div>
