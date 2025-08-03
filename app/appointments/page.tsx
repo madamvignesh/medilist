@@ -53,7 +53,8 @@ const AppointmentsPage = () => {
             <h1 className="text-2xl font-bold mb-4">Appointments</h1>
             <ul className="gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {loading && <li>Loading...</li>}
-                {!loading && appointments.length > 0 ? (
+                {!loading ? (
+                    appointments.length > 0 ? (
                     appointments.map((appointment) => (
                         <li key={appointment.id} className="bg-ebony-900/40 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors">
                             <div>
@@ -73,6 +74,9 @@ const AppointmentsPage = () => {
                     ))
                 ) : (
                     <div className="text-center text-gray-500">No appointments found</div>
+                )
+                ) : (
+                    <div className="text-center text-gray-500">Loading Doctors Data...</div>
                 )}
             </ul>
         </div>

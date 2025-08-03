@@ -83,8 +83,8 @@ const ManagementPage = () => {
                 </button>
             </div>
             <ul className="gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {loading && <li>Loading...</li>}
-                {!loading && doctors.length > 0 ? (
+                {!loading ? (
+                    doctors.length > 0 ? (
                     doctors.map((doctor) => (
                         <li key={doctor.id} className="bg-ebony-700/30 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors hover:scale-102 transition-transform cursor-pointer">
                             <div>
@@ -103,6 +103,9 @@ const ManagementPage = () => {
                     </li>
                 ))) : (
                     <div className="text-center text-gray-500">No doctors found</div>
+                )
+                ) : (
+                    <div className="text-center text-gray-500">Loading Appointments...</div>
                 )}
             </ul>
         </div>
