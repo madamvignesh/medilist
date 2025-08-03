@@ -17,6 +17,7 @@ const DoctorsPage = () => {
 };
 
     const [doctors, setDoctors] = useState<Doctor[]>([]);
+    const [loading, setLoading] = useState(true);
 
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
@@ -27,9 +28,11 @@ const DoctorsPage = () => {
     const [appointmentDate, setAppointmentDate] = useState("");
 
     const fetchDoctors = async () => {
+        setLoading(true);
         const response = await fetch(`https://medilist-back.onrender.com/api/doctors/search?search=${searchTerm}`);
         const data = await response.json();
         setDoctors(data);
+        setLoading(false);
         console.log("Fetched doctors:", data);
     };
 
@@ -95,7 +98,8 @@ const DoctorsPage = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {doctors.length > 0 ? (
+                {loading ? (
+                    {doctors.length > 0 ? (
                     doctors.map((doctor) => (
                         <div
                             key={doctor.id}
@@ -132,6 +136,8 @@ const DoctorsPage = () => {
                     ))
                 ) : (
                     <p>No doctors found</p>
+                )}) : (
+                    <p>Loading doctors...</p>
                 )}
             </div>
 
