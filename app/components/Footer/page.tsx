@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
+import ScrollVelocity from '../scrollVelocity/pages';
 
 const Footer: React.FC = () => (
   <footer className="bg-ebony-950 text-gray-200 py-10 border-t">
@@ -28,17 +29,21 @@ const Footer: React.FC = () => (
           <li><Link href="/terms" className="hover:underline">Terms of Service</Link></li>
         </ul>
         <div className="flex space-x-4">
-          <Link href="#"><Facebook className="w-6 h-6 hover:text-white"/></Link>
-          <Link href="#"><Twitter className="w-6 h-6 hover:text-white"/></Link>
-          <Link href="#"><Instagram className="w-6 h-6 hover:text-white"/></Link>
+          <Link href="#"><Facebook className="w-6 h-6 hover:text-white" /></Link>
+          <Link href="#"><Twitter className="w-6 h-6 hover:text-white" /></Link>
+          <Link href="#"><Instagram className="w-6 h-6 hover:text-white" /></Link>
         </div>
       </div>
     </div>
-    <div className='mt-8 '>
-        <h3 className='text-center'>Developed by Madam Vignesh</h3>
-      </div>
     <div className="mt-8 border-gray-700 pt-4 text-center text-sm">
       © {new Date().getFullYear()} MediList. All rights reserved.
+    </div>
+    <div className='mt-8 flex justify-center'>
+      <ScrollVelocity
+        texts={['Developed by', 'Madam Vignesh']}
+        velocity={100}
+        className="custom-scroll-text w-screen"
+      />
     </div>
   </footer>
 );
