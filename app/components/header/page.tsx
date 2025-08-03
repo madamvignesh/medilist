@@ -11,16 +11,17 @@ const Header = () => {
                 </div>
                 <div className="flex gap-5 justify-end items-center">
                     <Link href="/" className="text-sm flex flex-row text-white hover:text-blue-102 hidden md:block">
-                        <House className="w-5 h-5" /> Home
+                        <House className="w-5 h-5" /> 
+                        <p>Home</p>
                     </Link>
                     <Link href="/doctors" className="text-sm flex flex-row text-white hover:text-blue-102 hidden md:block">
-                        <ClipboardPlus className="w-5 h-5" /> Doctors
+                        <ClipboardPlus className="w-5 h-5" /> <p>Doctors</p>
                     </Link>
                     <Link href="/appointments" className="text-sm flex flex-row text-white hover:text-blue-102 hidden md:block">
-                        <ClipboardClock className="w-5 h-5" /> Appointments
+                        <ClipboardClock className="w-5 h-5" /> <p>Appointments</p>
                     </Link>
                     <Link href="/management" className="text-sm flex flex-row text-white hover:text-blue-102 hidden md:block">
-                        <ClipboardList className="w-5 h-5" /> Management
+                        <ClipboardList className="w-5 h-5" /> <p>Management</p>
                     </Link>
                     <Link href="/" className="text-sm text-white hover:text-blue-102 block md:hidden">
                         <House className="w-5 h-5" />
