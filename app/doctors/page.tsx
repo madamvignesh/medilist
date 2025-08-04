@@ -148,8 +148,9 @@ const DoctorsPage = () => {
                                 className="custom-scroll-text w-screen"
                             />
                         </div>
-                )}
                     </div>
+                )}
+                   
 
             {/* Modal */}
                 {showModal && selectedDoctor && (
