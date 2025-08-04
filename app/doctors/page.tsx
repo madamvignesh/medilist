@@ -200,9 +200,9 @@ const DoctorsPage = () => {
                         </div>
                     </div>
                 )}
-            </div>
+            </div>  
         </div>
-    );
+        );
 };
 
 export default DoctorsPage;
