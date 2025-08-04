@@ -150,9 +150,9 @@ const DoctorsPage = () => {
                         </div>
                     </div>
                 )}
-                   
 
-            {/* Modal */}
+
+                {/* Modal */}
                 {showModal && selectedDoctor && (
                     <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 ">
                         <div className=" pt-4 pb-4 gap-3 rounded-2xl shadow-lg w-full max-w-lg">
@@ -202,6 +202,7 @@ const DoctorsPage = () => {
                 )}
             </div>
             );
+        </div>
 };
 
-            export default DoctorsPage;
+export default DoctorsPage;
