@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { Search } from "lucide-react";
+import ScrollVelocity from "../components/scrollVelocity/pages";
 
 const ManagementPage = () => {
     type Doctor = {
@@ -85,29 +86,37 @@ const ManagementPage = () => {
             <ul className="gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {!loading ? (
                     doctors.length > 0 ? (
-                    doctors.map((doctor) => (
-                        <li key={doctor.id} className="bg-ebony-700/30 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors hover:scale-102 transition-transform cursor-pointer">
-                            <div>
-                                <h2 className="text-lg font-bold">{doctor.name}</h2>
-                                <p className="text-sm">{doctor.specialization}</p>
-                            </div>
-                        <div>
-                            <select className="mt-2 bg-ebony-800 text-white p-2 rounded" value={doctor.availability} onChange={(e) => updateAvailability(doctor.id, e.target.value)}>
-                                <option value="Available">Available</option>
-                                <option value="Busy">Busy</option>
-                                <option value="On Leave">On Leave</option>
-                                <option value="Unavailable">Unavailable</option>
-                                <option value="Appointed">Appointed</option>
-                            </select>
-                        </div>
-                    </li>
-                ))) : (
-                    <div className="text-center text-gray-500">No doctors found</div>
-                )
+                        doctors.map((doctor) => (
+                            <li key={doctor.id} className="bg-ebony-700/30 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors hover:scale-102 transition-transform cursor-pointer">
+                                <div>
+                                    <h2 className="text-lg font-bold">{doctor.name}</h2>
+                                    <p className="text-sm">{doctor.specialization}</p>
+                                </div>
+                                <div>
+                                    <select className="mt-2 bg-ebony-800 text-white p-2 rounded" value={doctor.availability} onChange={(e) => updateAvailability(doctor.id, e.target.value)}>
+                                        <option value="Available">Available</option>
+                                        <option value="Busy">Busy</option>
+                                        <option value="On Leave">On Leave</option>
+                                        <option value="Unavailable">Unavailable</option>
+                                        <option value="Appointed">Appointed</option>
+                                    </select>
+                                </div>
+                            </li>
+                        ))) : (
+                        <div className="text-center text-gray-500">No doctors found</div>
+                    )
                 ) : (
-                    <div className="text-center text-gray-500">Loading Appointments...</div>
+                    <div className="text-center text-gray-500">
+                        <div className='mt-8 flex justify-center'>
+                            <ScrollVelocity
+                                texts={['Fetching data', 'Please wait...']}
+                                velocity={100}
+                                className="custom-scroll-text w-screen"
+                            />
+                        </div>
+                    </div>
                 )}
-            </ul>
+                    </ul>
         </div>
     );
 }

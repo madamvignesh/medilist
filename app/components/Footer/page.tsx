@@ -38,13 +38,6 @@ const Footer: React.FC = () => (
     <div className="mt-8 border-gray-700 pt-4 text-center text-sm">
       © {new Date().getFullYear()} MediList. All rights reserved.
     </div>
-    <div className='mt-8 flex justify-center'>
-      <ScrollVelocity
-        texts={['Developed by', 'Madam Vignesh']}
-        velocity={100}
-        className="custom-scroll-text w-screen"
-      />
-    </div>
   </footer>
 );
 
