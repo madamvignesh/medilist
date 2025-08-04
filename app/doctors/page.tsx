@@ -201,8 +201,8 @@ const DoctorsPage = () => {
                     </div>
                 )}
             </div>
-            );
         </div>
+    );
 };
 
 export default DoctorsPage;
