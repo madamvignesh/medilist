@@ -98,11 +98,13 @@ const DoctorsPage = () => {
                 </button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="gap-6">
                 {!loading ? (
 
                     doctors.length > 0 ? (
-                        doctors.map((doctor) => (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {
+                                doctors.map((doctor) => (
                             <div
                                 key={doctor.id}
                                 className="bg-ebony-700/40 p-5 rounded-lg shadow-md hover:scale-95 transition-transform hover:bg-ebony-600/50 cursor-pointer"
@@ -135,13 +137,16 @@ const DoctorsPage = () => {
                                     )}
                                 </div>
                             </div>
-                        ))
+                        )
+                    )
+                            }
+                        </div>
                     ) : (
                         <p>No doctors found</p>
                     )
                 ) : (
                     <div className="w-full flex justify-center">
-                        <div className='mt-8 flex justify-center'>
+                        <div className='mt-8 flex justify-center text-gray-500'>
                             <ScrollVelocity
                                 texts={['Fetching Data', 'Please wait...']}
                                 velocity={100}

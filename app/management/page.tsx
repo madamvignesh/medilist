@@ -83,9 +83,10 @@ const ManagementPage = () => {
                     Search
                 </button>
             </div>
-            <ul className="gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div >
                 {!loading ? (
-                    doctors.length > 0 ? (
+                    <ul className="gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                        {doctors.length > 0 ? (
                         doctors.map((doctor) => (
                             <li key={doctor.id} className="bg-ebony-700/30 p-4 rounded-lg shadow-md flex flex-row justify-between items-center hover:bg-ebony-400/30 transition-colors hover:scale-102 transition-transform cursor-pointer">
                                 <div>
@@ -104,7 +105,8 @@ const ManagementPage = () => {
                             </li>
                         ))) : (
                         <div className="text-center text-gray-500">No doctors found</div>
-                    )
+                    )}
+                    </ul>
                 ) : (
                     <div className="text-center text-gray-500">
                         <div className='mt-8 flex justify-center'>
@@ -116,7 +118,7 @@ const ManagementPage = () => {
                         </div>
                     </div>
                 )}
-                    </ul>
+                    </div>
         </div>
     );
 }
