@@ -140,7 +140,7 @@ const DoctorsPage = () => {
                         <p>No doctors found</p>
                     )
                 ) : (
-                    <div>
+                    <div className="w-full flex justify-center">
                         <div className='mt-8 flex justify-center'>
                             <ScrollVelocity
                                 texts={['Fetching Data', 'Please wait...']}

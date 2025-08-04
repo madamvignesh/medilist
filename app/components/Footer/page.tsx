@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
-import ScrollVelocity from '../scrollVelocity/pages';
 
 const Footer: React.FC = () => (
   <footer className="bg-ebony-950 text-gray-200 py-10 border-t">
