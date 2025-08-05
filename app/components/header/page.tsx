@@ -11,18 +11,18 @@ const Header = () => {
                 </div>
                 <div className="flex gap-5 justify-end items-center w-1/2">
                     <div className="flex flex-row justify-between items-center text-sm text-white hover:text-blue-102 hover:font-bold transition-all gap-2">
-                        <Link href="/" className="hidden md:block">
+                        <Link href="/" >
                             <House className="w-5 h-5" />
                         </Link>
-                        <Link href="/">
+                        <Link href="/" className="hidden md:block">
                             <p>Home</p>
                         </Link>
                     </div>
                     <div className="flex flex-row justify-between items-center text-sm text-white hover:text-blue-102 hover:font-bold transition-all gap-2">
-                        <Link href="/doctors" className="hidden md:block">
+                        <Link href="/doctors">
                             <ClipboardPlus className="w-5 h-5" />
                         </Link>
-                        <Link href='/doctors'>
+                        <Link href='/doctors' className="hidden md:block">
                             <p>Doctors</p>
                         </Link>
                     </div>
@@ -30,7 +30,7 @@ const Header = () => {
                         <Link href="/appointments" className="hidden md:block">
                             <ClipboardClock className="w-5 h-5" />
                         </Link>
-                        <Link href="/appointments">
+                        <Link href="/appointments" className="hidden md:block">
                             <p>Appointments</p>
                         </Link>
                     </div>
@@ -38,7 +38,7 @@ const Header = () => {
                         <Link href="/management" className="hidden md:block">
                             <ClipboardList className="w-5 h-5" />
                         </Link>
-                        <Link href="/management">
+                        <Link href="/management" className="hidden md:block">
                             <p>Management</p>
                         </Link>
                     </div>
