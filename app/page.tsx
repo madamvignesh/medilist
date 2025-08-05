@@ -16,7 +16,7 @@ export default function Home() {
             <Link href="/doctors" className="text-sm text-black">Find Doctors</Link>
           </button>
         </div>
-        <div className="flex flex-col items-center justify-center w-full h-20">
+        {/* <div className="flex flex-col items-center justify-center w-full h-20">
           <CurvedLoop
             marqueeText="✦ Book ✦ Appoint ✦ Heal ✦ Care ✦ Save ✦ With ✦ MediList ✦"
             speed={3}
@@ -25,7 +25,7 @@ export default function Home() {
             interactive={true}
             className="custom-text-style"
           />
-        </div>
+        </div> */}
         </div>
       </div>
       <div>
