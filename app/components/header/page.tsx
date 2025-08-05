@@ -27,7 +27,7 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className="flex flex-row justify-between items-center text-sm text-white hover:text-blue-102 hover:font-bold transition-all gap-2">
-                        <Link href="/appointments" className="hidden md:block">
+                        <Link href="/appointments">
                             <ClipboardClock className="w-5 h-5" />
                         </Link>
                         <Link href="/appointments" className="hidden md:block">
@@ -35,7 +35,7 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className="flex flex-row justify-between items-center text-sm text-white hover:text-blue-102 hover:font-bold transition-all gap-2">
-                        <Link href="/management" className="hidden md:block">
+                        <Link href="/management">
                             <ClipboardList className="w-5 h-5" />
                         </Link>
                         <Link href="/management" className="hidden md:block">
